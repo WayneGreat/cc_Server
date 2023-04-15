@@ -28,4 +28,21 @@ int main() {
     //监听地址端口
     listen(socketFd, 10);
 
+#if 1
+
+#if 1
+
+
+#endif
+
+    //为客户端建立新连接
+    struct sockaddr_in clientAddr;
+    socklen_t len = sizeof(clientAddr);
+    int clientFd = accept(socketFd, (struct sockaddr *)&clientAddr, &len); // block: 等待一个客户端连接
+#endif
+
+    getchar(); // block
+
+    getchar();
+
 };
